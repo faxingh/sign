@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/wode/main",
     "pages/index/main",
     "pages/logs/main",
     "pages/counter/main"
