@@ -25,7 +25,7 @@
            <img src="/static/images/jinggao.png"/>
           <p>客服中心</p>
         </div>
-        <i>></i>
+        <i>>1</i>
       </div>
     </div>
   </div>
