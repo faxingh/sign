@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/nest/main",
     "pages/wode/main",
     "pages/addTest/main",
    
