@@ -15,14 +15,14 @@
     <div class="main">
       <div class="list">
         <div class="list-left">
-          <span>⊙</span>
+         <img src="/static/images/shizhong.png"/>
           <p>我的面试</p>
         </div>
         <i>></i>
       </div>
       <div class="list">
         <div class="list-left">
-          <span>⊙</span>
+           <img src="/static/images/jinggao.png"/>
           <p>客服中心</p>
         </div>
         <i>></i>
@@ -105,12 +105,13 @@ export default {
 .list-left {
   display: flex;
   line-height: 120rpx;
+  align-items: center;
 }
 .list-left p {
   margin-left: 20rpx;
 }
-.list-left span {
-  font-size: 50rpx;
-  color: blue;
+.list-left img {
+ width: 50rpx;
+ height: 50rpx;
 }
 </style>
