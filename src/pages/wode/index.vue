@@ -1,28 +1,24 @@
 <template>
   <div class="wrap">
     <div class="header">
-      <!-- <div>
-       <img src="/static/images/users.png" alt class="image" />
-      <p>159*****7149</p>
-      </div> -->
       <div class="img">
       <span>
-    <img src="/static/images/users.png" alt class="image" />
+       <img src="/static/images/users.png" alt class="image" />
       </span>
       <p class="phone">159****7149</p>
     </div>
     </div>
     <div class="main">
-      <div class="list">
+      <div class="list" @click="gointerview">
         <div class="list-left">
-          <span>⊙</span>
+         <img src="/static/images/shizhong.png"/>
           <p>我的面试</p>
         </div>
         <i>></i>
       </div>
-      <div class="list">
+      <div class="list" @click="gocallCenter">
         <div class="list-left">
-          <span>⊙</span>
+           <img src="/static/images/jinggao.png"/>
           <p>客服中心</p>
         </div>
         <i>></i>
@@ -40,7 +36,16 @@ export default {
 
   components: {},
 
-  methods: {},
+  methods: {
+     gointerview:()=>{
+      const url = '../interview/main'
+       mpvue.navigateTo({url})
+   },
+    gocallCenter:()=>{
+      const url = '../callCenter/main'
+       mpvue.navigateTo({url})
+   },
+  },
   created() {}
 };
 </script>
@@ -105,12 +110,13 @@ export default {
 .list-left {
   display: flex;
   line-height: 120rpx;
+  align-items: center;
 }
 .list-left p {
   margin-left: 20rpx;
 }
-.list-left span {
-  font-size: 50rpx;
-  color: blue;
+.list-left img {
+ width: 50rpx;
+ height: 50rpx;
 }
 </style>
