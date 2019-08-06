@@ -86,6 +86,6 @@ export default {
    background: #197DBF;
  }
  .btns span:nth-of-type(2){
-   background: #DC4E42;
+   background: #DC4E42
  }
 </style>
