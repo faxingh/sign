@@ -3,10 +3,9 @@
     "pages/nest/main",
     "pages/wode/main",
     "pages/addTest/main",
-   
     "pages/index/main",
     "pages/logs/main",
-    "pages/counter/main"
+    "pages/counter/main",
   ],
   "window": {
     "backgroundTextStyle": "light",
