@@ -24,18 +24,25 @@
 </template>
 
 <script>
+import {mapState, mapActions} from 'vuex';
+
 export default {
   data() {
     return {};
   },
   components: {},
   methods: {
+      ...mapActions({
+      sign: 'interview/getLocation'
+    }),
   goDetail:()=>{
       const url = '../detail/main'
        mpvue.navigateTo({url})
    },
   },
-  created() {}
+  created() {
+   this.sign()
+  }
 };
 </script>
 
