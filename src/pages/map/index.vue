@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
     <div class="main">
-       <map
+         <map
       id="map"
       show-location
       :markers="markers"
@@ -19,6 +19,9 @@
     <div class="img" @click="goWode">
          <img src="/static/images/users.png" alt class="image" />
     </div>
+    <div class="location" @click="location">
+        <img src="/static/images/location.png" alt class="image" />
+    </div>
   </div>
 </template>
 
@@ -27,16 +30,15 @@ import {mapState, mapActions} from 'vuex';
 export default {
   data() {
     return {
-      markers:[]
+        markers: []
     };
   },
-  computed: {
-      ...mapState({
+ computed: {
+     ...mapState({
       longitude: state=>state.home.longitude,
       latitude: state=>state.home.latitude
     })
   },
-  components: {},
   methods: {
      ...mapActions({
       location: 'home/getLocation'
@@ -71,10 +73,22 @@ export default {
   width: 100%;
   height: 100%;
 }
+map{
+  width: 100%;
+  height: 100%;
+}
 .location{
   position: fixed;
-  bottom: 30rpx;
-  left: 30rpx;
+  bottom: 150rpx;
+  left: 50rpx;
+   width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.location img{
+    width: 100%;
+    height: 100%;
 }
 .img{
   position: fixed;
