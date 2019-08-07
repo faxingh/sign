@@ -7,7 +7,7 @@
      <p>全部</p>
     </div>
     <div class="main">
-       <div class="list">
+       <div class="list" @click="goDetail">
           <div class="list-top">
             <h3>百度</h3><span>已打卡</span>
           </div>
@@ -19,73 +19,7 @@
              <span>未提醒</span>
           </div>
        </div>
-        <div class="list">
-          <div class="list-top">
-            <h3>百度</h3><span>已打卡</span>
-          </div>
-          <div class="list-con">
-            <p>北京市海淀区上地路八维大学</p>
-          </div>
-          <div class="list-bottom">
-             <p>面试时间: <span>2019-08-07 0:07</span></p>
-             <span>未提醒</span>
-          </div>
-       </div>
-        <div class="list">
-          <div class="list-top">
-            <h3>百度</h3><span>已打卡</span>
-          </div>
-          <div class="list-con">
-            <p>北京市海淀区上地路八维大学</p>
-          </div>
-          <div class="list-bottom">
-             <p>面试时间: <span>2019-08-07 0:07</span></p>
-             <span>未提醒</span>
-          </div>
-       </div>
-        <div class="list">
-          <div class="list-top">
-            <h3>百度</h3><span>已打卡</span>
-          </div>
-          <div class="list-con">
-            <p>北京市海淀区上地路八维大学</p>
-          </div>
-          <div class="list-bottom">
-             <p>面试时间: <span>2019-08-07 0:07</span></p>
-             <span>未提醒</span>
-          </div>
-          
-       </div>
-         <div class="list">
-          <div class="list-top">
-            <h3>百度</h3><span>已打卡</span>
-          </div>
-          <div class="list-con">
-            <p>北京市海淀区上地路八维大学</p>
-          </div>
-          <div class="list-bottom">
-             <p>面试时间: <span>2019-08-07 0:07</span></p>
-             <span>未提醒</span>
-          </div>
-          
-       </div>
-         <div class="list">
-          <div class="list-top">
-            <h3>百度</h3><span>已打卡</span>
-          </div>
-          <div class="list-con">
-            <p>北京市海淀区上地路八维大学</p>
-          </div>
-          <div class="list-bottom">
-             <p>面试时间: <span>2019-08-07 0:07</span></p>
-             <span>未提醒</span>
-          </div>
-          
-       </div>
-
     </div>
-   
-  
   </div>
 </template>
 
@@ -96,7 +30,10 @@ export default {
   },
   components: {},
   methods: {
-
+  goDetail:()=>{
+      const url = '../detail/main'
+       mpvue.navigateTo({url})
+   },
   },
   created() {}
 };
