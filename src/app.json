@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/map/main",
     "pages/detail/main",
+    "pages/map/main",
     "pages/callCenter/main",
     "pages/interview/main",
     "pages/nest/main",

@@ -1,7 +1,17 @@
 <template>
   <div class="wrap">
     <div class="main">
-         <map name=""></map>
+       <map
+      id="map"
+      show-location
+      :markers="markers"
+      :longitude="longitude"
+      :latitude="latitude"
+    ></map>
+    <cover-view class="location" @click="location">
+       <button>定位</button>
+    </cover-view>
+         <!-- <map name=""></map> -->
     </div>
     <div class="foot">
       <p @click="goaddTest">添加面试</p>
@@ -13,12 +23,24 @@
 </template>
 
 <script>
+import {mapState, mapActions} from 'vuex';
 export default {
   data() {
-    return {};
+    return {
+      markers:[]
+    };
+  },
+  computed: {
+      ...mapState({
+      longitude: state=>state.home.longitude,
+      latitude: state=>state.home.latitude
+    })
   },
   components: {},
   methods: {
+     ...mapActions({
+      location: 'home/getLocation'
+    }),
     goaddTest:()=>{
       const url = '../addTest/main'
        mpvue.navigateTo({url})
@@ -48,6 +70,11 @@ export default {
 .main map{
   width: 100%;
   height: 100%;
+}
+.location{
+  position: fixed;
+  bottom: 30rpx;
+  left: 30rpx;
 }
 .img{
   position: fixed;
