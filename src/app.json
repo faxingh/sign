@@ -1,7 +1,7 @@
 {
   "pages": [
+    "pages/detail/main",
     "pages/map/main",
-    "pages/detail/main",  
     "pages/callCenter/main",
     "pages/interview/main",
     "pages/nest/main",
@@ -14,7 +14,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "一面而就",
+    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
