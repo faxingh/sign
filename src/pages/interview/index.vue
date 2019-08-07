@@ -7,12 +7,12 @@
      <p>全部</p>
     </div>
     <div class="main">
-       <div class="list" @click="goDetail">
+       <div class="list" @click="goDetail" v-for="(item,index) in viewList" :key='index'>
           <div class="list-top">
-            <h3>百度</h3><span>已打卡</span>
+            <h3>{{item.company}}</h3><span>已打卡</span>
           </div>
           <div class="list-con">
-            <p>北京市海淀区上地路八维大学</p>
+            <p></p>
           </div>
           <div class="list-bottom">
              <p>面试时间: <span>2019-08-07 0:07</span></p>
@@ -30,7 +30,11 @@ export default {
   data() {
     return {};
   },
-  components: {},
+  computed: {
+     ...mapState({
+      viewList: state=>state.interview.viewList,
+    })
+  },
   methods: {
       ...mapActions({
       sign: 'interview/getLocation'
