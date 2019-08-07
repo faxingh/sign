@@ -2,14 +2,14 @@
    <div class="testWrap">
       <h2>面试信息</h2>
       <div class="company">
-        <p><em>公司名称</em><input placeholder="请输入公司名称"/></p>
-        <p><em>公司电话</em><input placeholder="请输入面试联系人电话"/></p>
+        <p><em>公司名称</em><input value="请输入公司名称"/></p>
+        <p><em>公司电话</em><input value="请输入面试联系人电话"/></p>
         <p><em>面试时间</em><input value='2019-07-19 18:00'/></p>
-        <p><em>面试地址</em><input placeholder="请选择面试地址"/></p>
+        <p><em>面试地址</em><input value="请选择面试地址"/></p>
       </div>
       <h2>备注信息</h2>
       <div class="textarea">
-          <textarea placeholder="备注信息(可选，100字以内)"  rows="5" cols="50"></textarea>
+          <textarea value="备注信息(可选，100字以内)"  rows="5" cols="50"></textarea>
           <span>确认</span>
       </div>
       

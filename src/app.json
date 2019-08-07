@@ -3,8 +3,9 @@
     "pages/map/main",
     "pages/callCenter/main",
     "pages/interview/main",
+    "pages/nest/main",
+    "pages/wode/main",
     "pages/addTest/main",
-    "pages/wode/main",  
     "pages/index/main",
     "pages/logs/main",
     "pages/counter/main"
