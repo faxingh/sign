@@ -6,6 +6,8 @@ import CreateLogger from 'vuex/dist/logger';
 import home from './modules/home';
 import interview from './modules/interview'
 import addText from './modules/addText'
+import address from './modules/address';
+
 Vue.use(Vuex);
 
 
@@ -13,7 +15,8 @@ export default new Vuex.Store({
   modules: {
     home,
     interview,
-    addText
+    addText,
+    address
   },
   plugins: [CreateLogger()]
 })

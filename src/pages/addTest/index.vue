@@ -2,19 +2,14 @@
    <div class="testWrap">
       <h2>面试信息</h2>
       <div class="company">
-        
-        <p><em>公司名称</em><input value="请输入公司名称" v-model="username" disable/></p>
-        <p><em>公司电话</em><input value="请输入面试联系人电话" v-model="tel" disable/></p>
-        <p><em>面试时间</em><input value='2019-07-19 18:00' disable/></p>
-        <p><em>面试地址</em><input value="请选择面试地址" @click='goAddress' disable/></p>
+        <p><em>公司名称</em><input placeholder="请输入公司名称" v-model="username" /></p>
+        <p><em>公司电话</em><input placeholder="请输入面试联系人电话" v-model="tel" /></p>
+        <p><em>面试时间</em><input placeholder='2019-07-19 18:00' disable/></p>
+        <p><em>面试地址</em><input placeholder="请选择面试地址" @click='goAddress' v-model="address" disable/></p>
         <h2>备注信息</h2>
-        <textarea value="备注信息(可选，100字以内)"  rows="5" cols="50"></textarea>
-         
+        <textarea placeholder="备注信息(可选，100字以内)" v-model="description"  rows="5" cols="50"></textarea>
       </div>
         <input type='submit' class="btn" value="确认" @click="handleSubmit ">
-   
-      
-    
    </div>
 </template>
 
@@ -27,7 +22,8 @@ export default {
     username: "",
     tel: "",
     time: "",
-    address: ""
+    address: "",
+    description:''
   },
 
   computed: {
@@ -52,6 +48,13 @@ export default {
     //  },
   },
   created() {
+    
+  },
+  onLoad(options) {
+   if(options.address){
+      this.address = options.address;
+      console.log( this.address)
+   }
     
   }
 };

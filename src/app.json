@@ -1,12 +1,10 @@
 {
   "pages": [  
-    "pages/interview/main", 
     "pages/map/main",
     "pages/address/main",
     "pages/addTest/main",
-    "pages/detail/main",  
     "pages/callCenter/main",
-    
+    "pages/interview/main",
     "pages/nest/main",
     "pages/wode/main"
 

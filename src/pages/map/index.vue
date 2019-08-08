@@ -1,26 +1,22 @@
 <template>
   <div class="wrap">
     <div class="main">
-         <map
-      id="map"
-      show-location
-      :markers="markers"
-      :longitude="longitude"
-      :latitude="latitude"
+      <map
+        id="map"
+        show-location
+        :markers="markers"
+        :longitude="longitude"
+        :latitude="latitude"
     ></map>
-    <cover-view class="location" @click="location">
-       <button>定位</button>
-    </cover-view>
-         <!-- <map name=""></map> -->
     </div>
     <div class="foot">
       <p @click="goaddTest">添加面试</p>
     </div>
     <div class="img" @click="goWode">
-         <img src="/static/images/users.png" alt class="image" />
+       <img src="/static/images/users.png" alt class="image" />
     </div>
     <div class="location" @click="location">
-        <img src="/static/images/location.png" alt class="image" />
+       <img src="/static/images/location.png" alt class="image" />
     </div>
   </div>
 </template>
@@ -34,7 +30,7 @@ export default {
     };
   },
  computed: {
-     ...mapState({
+   ...mapState({
       longitude: state=>state.home.longitude,
       latitude: state=>state.home.latitude
     })
@@ -46,12 +42,11 @@ export default {
     goaddTest:()=>{
       const url = '../addTest/main'
        mpvue.navigateTo({url})
-   },
-   goWode:()=>{
+    },
+    goWode:()=>{
       const url = '../wode/main'
        mpvue.navigateTo({url})
-   }
-
+    }
   },
   created() {}
 };
