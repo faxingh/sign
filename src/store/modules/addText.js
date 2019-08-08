@@ -1,4 +1,4 @@
-import {add} from '@/service/addText';
+import {addSign} from '@/service/addText';
 // 模块所有的状态
 const state = {
    getList:[],
@@ -12,7 +12,7 @@ const state = {
   
   // 模块内的同步改变
   const mutations = {
-    updateList(state, payload){
+    updateState(state, payload){
       state.content={...state.content,...payload}
       }
   }
@@ -21,12 +21,7 @@ const state = {
   const actions = {
     async submit(state, {...payload}){
       return new Promise(async (resolve, reject)=>{
-         // 填充经纬度
-        payload.latitude = payload.address.location.lat;
-        payload.longitude = payload.address.location.lng;
-        // 序列号地址
-        payload.address = JSON.stringify(payload.address);
-        let result = await add(payload);
+        let result = await addSign(payload);
         resolve(result);
       })
     }

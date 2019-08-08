@@ -46,13 +46,10 @@ export default {
     goWode:()=>{
       const url = '../wode/main'
        mpvue.navigateTo({url})
-<<<<<<< HEAD
     }
-=======
-   }
+  
    
 
->>>>>>> e610638818ffebffa06564b3fe380ea20332bad9
   },
   created() {}
 };

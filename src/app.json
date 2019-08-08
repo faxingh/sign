@@ -2,15 +2,9 @@
   "pages": [  
     "pages/map/main",
     "pages/addTest/main",
-<<<<<<< HEAD
-    "pages/callCenter/main",
-    "pages/interview/main",
-=======
     "pages/interview/main", 
     "pages/address/main",
-    "pages/detail/main",  
     "pages/callCenter/main",
->>>>>>> e610638818ffebffa06564b3fe380ea20332bad9
     "pages/nest/main",
     "pages/wode/main"
   ],

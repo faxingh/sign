@@ -11,8 +11,11 @@
                   <input placeholder="请输入面试联系人电话" v-model="content.phone" focus/>
               </p>
               <p class="times">
-                  <label for=''>面试时间</label>
-                  <input placeholder='2019-07-19 18:00' disable/>
+                  <span>
+                    <label for=''>面试时间</label>
+                    <input placeholder='2019-07-19 18:00' disable/>
+                  </span>
+                  
                   <icon
                     @click="showTip"
                     class="tip"
@@ -21,10 +24,7 @@
                     size="24">
                   </icon>
               </p>
-              <p>
-                  <label for=''>面试地址</label>
-                  <input placeholder="请选择面试地址" @click='goAddress' v-model="content.address" focus/>
-              </p>
+              <p><em>面试地址</em><input placeholder="请选择面试地址" @click='goAddress' v-model="address" disable/></p>
               <h2>备注信息</h2>
               <textarea placeholder="备注信息(可选，100字以内"  rows="5" cols="50"  v-model="content.description">                    
               </textarea> 
@@ -37,9 +37,14 @@
 // Use Vuex
 // import store from './store'
 import { mapState,mapMutations,mapActions } from "vuex";
-import { async } from 'q';
-export default {
 
+export default {
+data() {
+  return{
+     address:''
+  }
+
+},
   computed: {
     ...mapState({
       content: state => state.addText.content
@@ -111,27 +116,25 @@ export default {
       }
     
       // 添加form_id
-
+      this.content.form_id = e.target.formId;
       this.submiting = true;
-      let data = await this.addText(this.content);
-      console.log('data...', data);
+      let data = await this.submitText(this.content);
+      console.log('data...6666666666', data);
       this.submiting = false;
       // 处理添加结果
       if (data.code == 0){
         wx.showModal({
-          title: '温馨提示', //提示的标题,
           content: data.msg, //提示的内容,
           showCancel: false,
-          confirmText: '确定', //确定按钮的文字，默认为取消，最多 4 个字符,
-          confirmColor: '#197DBF', //确定按钮的文字颜色,
           success: res => {
             if (res.confirm) {
-             this.updateList({
+             this.updateState({
+               form_id:'',
                 company: '',
                 address: '',
                 phone: ''
              })
-             wx.navigateTo({ url: '/pages/interview/main' });
+             wx.navigateTo({ url: '/pages/interview' });
             }
           }
         });
@@ -143,9 +146,7 @@ export default {
       }
     }
   },
-  created() {
-    
-  },
+
   onLoad(options) {
    if(options.address){
       this.address = options.address;
