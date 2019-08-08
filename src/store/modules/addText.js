@@ -1,21 +1,23 @@
 import {add} from '@/service';
 // 模块所有的状态
 const state = {
-   list:[]
+   getList:[]
   }
   
   // 模块内的同步改变
   const mutations = {
-    updateSign(state, payload){
-        console.log(payload)
+    updateList(state, payload){
+      state.getList = payload;
+      console.log(payload)
       }
   }
 
   // 模块内的异步改变
   const actions = {
-    async getLocation({commit},payload){
-        const res=await sign();
-        commit("updateSign",res.data);
+    async listData({commit},payload){
+        const res = await add();
+        //console.log(res);
+        commit("updateList",res.data);
     }
    }
   

@@ -1,13 +1,15 @@
 {
-  "pages": [
+  "pages": [   
     "pages/map/main",
-    "pages/detail/main",
-  
+    "pages/address/main",
+    
+    "pages/addTest/main",
+    "pages/detail/main",  
     "pages/callCenter/main",
     "pages/interview/main",
     "pages/nest/main",
-    "pages/wode/main",
-    "pages/addTest/main"
+    "pages/wode/main"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
