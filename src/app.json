@@ -7,7 +7,6 @@
     "pages/interview/main",
     "pages/nest/main",
     "pages/wode/main"
-
   ],
   "window": {
     "backgroundTextStyle": "light",
