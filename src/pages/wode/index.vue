@@ -2,23 +2,23 @@
   <div class="wrap">
     <div class="header">
       <div class="img">
-      <span>
-       <img src="/static/images/users.png" alt class="image" />
-      </span>
-      <p class="phone">159****7149</p>
-    </div>
+        <span>
+          <img src="/static/images/users.png" alt class="image" />
+        </span>
+        <p class="phone">159****7149</p>
+      </div>
     </div>
     <div class="main">
       <div class="list" @click="gointerview">
         <div class="list-left">
-         <img src="/static/images/shizhong.png"/>
+          <img src="/static/images/shizhong.png" />
           <p>我的面试</p>
         </div>
         <i>></i>
       </div>
       <div class="list" @click="gocallCenter">
         <div class="list-left">
-           <img src="/static/images/jinggao.png"/>
+          <img src="/static/images/jinggao.png" />
           <p>客服中心</p>
         </div>
         <i>></i>
@@ -37,14 +37,14 @@ export default {
   components: {},
 
   methods: {
-     gointerview:()=>{
-      const url = '../interview/main'
-       mpvue.navigateTo({url})
-   },
-    gocallCenter:()=>{
-      const url = '../callCenter/main'
-       mpvue.navigateTo({url})
-   },
+    gointerview: () => {
+      const url = "../interview/main";
+      mpvue.navigateTo({ url });
+    },
+    gocallCenter: () => {
+      const url = "../callCenter/main";
+      mpvue.navigateTo({ url });
+    }
   },
   created() {}
 };
@@ -104,7 +104,7 @@ export default {
   box-sizing: border-box;
   align-items: center;
 }
-.list i{
+.list i {
   color: #666666;
 }
 .list-left {
@@ -116,7 +116,7 @@ export default {
   margin-left: 20rpx;
 }
 .list-left img {
- width: 50rpx;
- height: 50rpx;
+  width: 50rpx;
+  height: 50rpx;
 }
 </style>
