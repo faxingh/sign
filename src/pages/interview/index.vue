@@ -84,10 +84,14 @@ export default {
   width: 100%;
   height: 88rpx;
   display: flex;
-  align-items: center;
   justify-content: space-around;
   font-size: 28rpx;
   border: 1px solid #cccccc;
+}
+.head p{
+
+  height: 88rpx;
+  line-height: 88rpx;
 }
 .list{
   width: 100%;
@@ -115,16 +119,18 @@ export default {
   width: 100rpx;
   height: 50rpx;
   font-size: 24rpx;
-  color: blue;
+  color: #409EFF;
   text-align: center;
   line-height: 50rpx;
-  background: skyblue;
+  background: #ECF5FF;
+  padding: 5rpx;
+
 }
 .list-con{
   width: 100%;
   flex: 1;
   font-size: 28rpx;
-  color: #666666;
+  color: #999;
   padding: 0 0 0 20rpx;
    box-sizing: border-box;
   display: flex;
@@ -142,14 +148,17 @@ export default {
 .list-bottom>span{
   width: 100rpx;
   height: 40rpx;
-  font-size: 24rpx;
-  color: blue;
+  font-size: 30rpx;
+  color: #409EFF;
   text-align: center;
   line-height: 40rpx;
-  background: skyblue;
+  background: #ECF5FF;
+  padding: 12rpx;
 }
 .active{
-  color: blue;
+  color: #2785C3;
+  border-bottom: 2px solid #197DBF;
+
 }
 
 </style>
