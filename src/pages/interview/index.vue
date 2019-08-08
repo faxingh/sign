@@ -6,14 +6,14 @@
     <div class="main">
        <div class="list" @click="goDetail(item.id)" v-for="(item,index) in viewList" :key='index'>
           <div class="list-top">
-             <h3>{{item.company}}</h3><span>已打卡</span>
+             <h3>{{item.company}}</h3><span>{{item.status?item.status==1?'已放弃':'未开始':'已打卡'}}</span>
           </div>
           <div class="list-con">
-            <p>北京八维这一块 </p>
+            <p>{{item.address.address}}1</p>
           </div>
           <div class="list-bottom">
-             <p>面试时间: <span>2019-08-07 0:07</span></p>
-             <span>未提醒</span>
+             <p>面试时间: <span>{{item.start_time}}</span></p>
+             <span>{{item.remind?'未提醒':'已提醒'}}</span>
           </div>
        </div>
     </div>
@@ -60,6 +60,7 @@ export default {
    tab(index){
      this.num = index;
    }
+
   },
   created() {
    this.sign()

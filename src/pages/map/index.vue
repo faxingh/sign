@@ -8,10 +8,6 @@
       :longitude="longitude"
       :latitude="latitude"
     ></map>
-    <cover-view class="location" @click="location">
-       <button>定位</button>
-    </cover-view>
-         <!-- <map name=""></map> -->
     </div>
     <div class="foot">
       <p @click="goaddTest">添加面试</p>
@@ -51,6 +47,7 @@ export default {
       const url = '../wode/main'
        mpvue.navigateTo({url})
    }
+   
 
   },
   created() {}
