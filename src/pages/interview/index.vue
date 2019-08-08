@@ -27,6 +27,7 @@ export default {
   data() {
     return {
       num:3,
+      //标题数组
       topList:[
         {
           title:'未开始',
@@ -89,7 +90,6 @@ export default {
   border: 1px solid #cccccc;
 }
 .head p{
-
   height: 88rpx;
   line-height: 88rpx;
 }
@@ -124,7 +124,6 @@ export default {
   line-height: 50rpx;
   background: #ECF5FF;
   padding: 5rpx;
-
 }
 .list-con{
   width: 100%;
